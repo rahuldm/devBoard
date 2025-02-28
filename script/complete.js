@@ -21,7 +21,13 @@ for (const completeButton of completeButtons) {
         } else {
             alert("Board update successfully!");
         }
+
+        
         
     });
    
 }
+document.getElementById('color').addEventListener('click', function() {
+    document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+});
+
