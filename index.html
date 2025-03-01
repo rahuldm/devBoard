@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/8733ac514e.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Dev Board</title>
+    <style type="text/tailwindcss">
+        @theme {
+          
+          --font-poppins:"Poppins", serif;
+        }
+      </style>
 </head>
 
-<body class="bg-[#f4f7ff]">
-    <section class="w-6/8 mx-auto h-screen mt-4">
+<body class="bg-[#f4f7ff] font-poppins">
+    <section class="w-6/8 mx-auto h-screen pt-4">
         <header>
-            <nav class="flex justify-between items-center p-4 bg-cyan-200 text-white border rounded-2xl">
+            <nav class="flex justify-between items-center p-4 bg-white text-black border rounded-2xl border-none ">
                 <div class="flex items-center">
                     <img src="assets/logo.png" alt="">
                     <p class="text-4xl ml-3">Dev<span class="font-bold text-black">Board</span></p>
                 </div>
                 <div class="flex items-center">
-                    <div class="flex flex-row items-center bg-slate-200 border rounded-[32px] px-3 mr-9">
+                    <div class="flex flex-row items-center bg-slate-200 border rounded-[32px] px-3 py-2 mr-9">
 
                         <img src="assets/checkbox.png" alt="">
 
@@ -32,27 +43,26 @@
         </header>
         <!-- main section -->
         <main class="mt-4 grid grid-cols-10 gap-4">
-
-            <section class="col-span-7 bg-slate-300 p-4">
-                <div class="grid grid-cols-4 gap-4">
-                    <div class="flex items-center gap-4 p-4 border rounded-xl">
+            <section class="col-span-7 bg-white p-4 border rounded-xl border-none">
+                <div class="grid grid-cols-4 gap-4 ">
+                    <div class="flex items-center gap-4 p-4 border rounded-xl bg-[#f4f7ff] border-none">
                         <div class=" border rounded-full h-16 w-16 flex items-center justify-center bg-blue-50"><img
                                 src="assets/checkbox.png" alt=""></div>
                         <div>
                             <p>Task Assigned</p>
-                            <p id="task-assigned" class="font-bold">6</p>
+                            <p id="task-assigned" class="font-bold">06</p>
                         </div>
 
                     </div>
                     <div id="discover-page"
-                        class="bg-yellow-400 p-2 col-span-2 flex items-center px-10 py-6 border rounded-xl bg-gradient-to-br from-[#3752fd] via-[#6c7ffa] to-[#9ba8f8]">
+                        class="bg-yellow-400 p-2 col-span-2 flex items-center px-10 py-6 border rounded-xl bg-gradient-to-br from-[#3752fd] via-[#6c7ffa] to-[#9ba8f8] border-none">
                         <img src="assets/board.png" alt="">
                         <div class="ml-5">
-                            <p>Discover Something <br> New Today!</p>
+                            <p class="text-2xl text-white">Discover Something <br> New Today!</p>
 
                         </div>
                     </div>
-                    <div class="bg-purple-400  flex items-center p-4 gap-4 border rounded-xl">
+                    <div class="bg-[#f4f7ff]  flex items-center p-4 gap-4 border rounded-xl border-none">
                         <div class="bg-white border rounded-full h-16 w-16 flex items-center justify-center "><img
                                 src="assets/calender.png" alt=""></div>
                         <div>
@@ -62,19 +72,19 @@
                     </div>
                 </div>
                 <!-- dash line -->
-                <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                <div class="border-t-2 border-dashed border-gray-200 w-full mt-6 mb-6"></div>
                 <!-- task section -->
                 <div class="grid grid-cols-3 gap-4 mt-4 ">
                     <!--   card 1 -->
-                    <div class="bg-[#f4f7ff] p-4 border rounded-xl flex  flex-col card">
-                        <button class="btn w-2/5">ShopEase</button>
-                        <h3 class="text-2xl font-medium">Fix Mobile Button Issue </h3>
-                        <div class="bg-white p-2 border rounded-2xl">
+                    <div class="bg-[#f4f7ff] p-4 border rounded-xl flex  flex-col card border-none">
+                        <button class="btn w-2/5 bg-white mb-4">ShopEase</button>
+                        <h3 class="text-2xl font-medium mb-4">Fix Mobile Button Issue </h3>
+                        <div class="bg-white p-3 border rounded-2xl border-none">
                             <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
                                 properly.
                             </p>
                         </div>
-                        <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                        <div class="border-t-2 border-dashed border-gray-200 w-full mt-3"></div>
                         <div class="flex flex-row justify-between  mt-3">
                             <div>
                                 <p>Deadline</p>
@@ -93,7 +103,7 @@
                                 properly.
                             </p>
                         </div>
-                        <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                        <div class="border-t-2 border-dashed border-gray-200 w-full mt-3"></div>
                         <div class="flex flex-row justify-between  mt-3">
                             <div>
                                 <p>Deadline</p>
@@ -113,7 +123,7 @@
                                 properly.
                             </p>
                         </div>
-                        <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                        <div class="border-t-2 border-dashed border-gray-200 w-full mt-3"></div>
                         <div class="flex flex-row justify-between  mt-3">
                             <div>
                                 <p>Deadline</p>
@@ -132,7 +142,7 @@
                                 properly.
                             </p>
                         </div>
-                        <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                        <div class="border-t-2 border-dashed border-gray-200 w-full mt-3"></div>
                         <div class="flex flex-row justify-between  mt-3">
                             <div>
                                 <p>Deadline</p>
@@ -151,7 +161,7 @@
                                 properly.
                             </p>
                         </div>
-                        <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                        <div class="border-t-2 border-dashed border-gray-200 w-full mt-3"></div>
                         <div class="flex flex-row justify-between  mt-3">
                             <div>
                                 <p>Deadline</p>
@@ -170,7 +180,7 @@
                                 properly.
                             </p>
                         </div>
-                        <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                        <div class="border-t-2 border-dashed border-gray-200 w-full mt-3"></div>
                         <div class="flex flex-row justify-between  mt-3">
                             <div>
                                 <p>Deadline</p>
@@ -183,7 +193,6 @@
 
                 </div>
 
-
             </section>
             <section class="col-span-3 bg-green-500 p-4 border rounded-xl flex flex-col items-center">
                 <div class="text-center flex justify-center gap-4 mb-4">
@@ -191,7 +200,7 @@
                     <p class="font-medium text-xl">Activity log</p>
                 </div>
                 <button class=" btn bg-blue-500 border-none text-white">Clear History</button>
-                <div class="border-t-2 border-dashed border-gray-400 w-full mt-3"></div>
+                <div class="border-t-2 border-dashed border-gray-200 w-full mt-3"></div>
                 <div id="transaction-history" class="grid gap-4 mt-4  ">
 
                 </div>
