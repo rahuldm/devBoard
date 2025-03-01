@@ -22,13 +22,13 @@ for (const completeButton of completeButtons) {
 
         const transHistory = document.getElementById('transaction-history');
         const p = document.createElement('p');
-        p.style.backgroundColor = "#4CAF50";
-        p.style.color = "white"; 
+        p.style.backgroundColor = "#f4f3ff";
+        p.style.color = "black"; 
         p.style.padding = "10px"; 
         p.style.margin = "10px auto"; 
         p.style.width = "80%"; 
         p.style.borderRadius = "5px"; 
-        p.style.textAlign = "center"; 
+        p.style.textAlign = "start";  
         p.innerText = `You have completed the task ${title}  at ${time}`;
         transHistory.appendChild(p);
        
@@ -36,12 +36,12 @@ for (const completeButton of completeButtons) {
         completeButton.disabled = true;
         if (updatedValue === 0) {
             alert("Board update successfully!");
-            alert("Congrats !!! You have  completed all the tasks!");
+            alert("Congrats !!! You have completed all the tasks!");
         } else {
             alert("Board update successfully!");
         }
 
-        
+    
         
     });
    
@@ -56,17 +56,24 @@ function getTime() {
     return time;
 }
 
-function getFormattedDate() {
+function getDate() {
     const date = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
     return date.toLocaleDateString('en-US', options);
 }
 
-const todayDate = document.getElementById('time').innerText = getFormattedDate();
+const todayDate = document.getElementById('time').innerText = getDate();
 document.getElementById('discover-page').addEventListener('click', function(event){
     event.preventDefault();
     window.location.href = './blog.html';
 }); 
+
+document.getElementById('clear-history-btn').addEventListener('click', function() {
+    const transHistory = document.getElementById('transaction-history');
+    while (transHistory.firstChild) {
+        transHistory.removeChild(transHistory.firstChild);
+    }
+});
 
 
 
