@@ -1,5 +1,3 @@
-document.getElementById('back').addEventListener('click', function(event){
-    event.preventDefault();
-    console.log("Back to Home");
+document.getElementById('back').addEventListener('click', function(){
     window.location.href = './index.html';
 });

@@ -1,6 +1,7 @@
 const completeButtons = document.querySelectorAll(".completed");
 for (const completeButton of completeButtons) {
     completeButton.addEventListener("click", () => {
+
         const taskValue = document.getElementById('task-assigned').innerText;
         const convertedValue = parseInt(taskValue);
         const updatedValue = convertedValue - 1;
@@ -34,6 +35,7 @@ for (const completeButton of completeButtons) {
        
 
         completeButton.disabled = true;
+        
         if (updatedValue === 0) {
             alert("Board update successfully!");
             alert("Congrats !!! You have completed all the tasks!");
@@ -66,8 +68,7 @@ function getDate() {
 }
 
 const todayDate = document.getElementById('time').innerText = getDate();
-document.getElementById('discover-page').addEventListener('click', function(event){
-    event.preventDefault();
+document.getElementById('discover-page').addEventListener('click', function(){
     window.location.href = './blog.html';
 }); 
 
