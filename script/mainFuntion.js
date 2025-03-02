@@ -17,7 +17,7 @@ for (const completeButton of completeButtons) {
 
         const card = completeButton.closest('.card'); 
         const title = card.querySelector("h3").innerText;
-        console.log(title);
+        
 
         const time = getTime();
 
@@ -35,7 +35,7 @@ for (const completeButton of completeButtons) {
        
 
         completeButton.disabled = true;
-        
+
         if (updatedValue === 0) {
             alert("Board update successfully!");
             alert("Congrats !!! You have completed all the tasks!");
